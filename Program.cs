@@ -1,9 +1,11 @@
-﻿
+
 using System;
+
 
 class Program
 {
     // Method 1: Naam vragen
+    
     static string VraagNaam()
     {
         Console.Write("Wat is je naam? ");
@@ -121,17 +123,24 @@ class Program
     // Overloaded method 1: normale prijs
     static double BerekenPrijs(int kaartjes)
     {
-        return kaartjes * 10;
+        
+        return kaartjes * 12.50;
+        
     }
 
     // Overloaded method 2: prijs met studentenkorting
     static double BerekenPrijs(int kaartjes, bool student)
     {
-        double prijs = kaartjes * 10;
+        double prijs = kaartjes * -1;
 
         if (student)
         {
             prijs = prijs * 0.80;
+        }
+
+        if (prijs < 0)
+        {
+            Console.WriteLine("Fout: de prijs mag niet lager zijn dan €0.");
         }
 
         return prijs;
