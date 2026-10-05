@@ -131,7 +131,7 @@ class Program
     // Overloaded method 2: prijs met studentenkorting
     static double BerekenPrijs(int kaartjes, bool student)
     {
-        double prijs = kaartjes * -1;
+        double prijs = kaartjes * 12.50;
 
         if (student)
         {
